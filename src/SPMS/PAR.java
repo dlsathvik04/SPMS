@@ -34,6 +34,7 @@ public class PAR {
         }
     }
 
+    @SuppressWarnings("resource")
     static void login(int ser_no, String password) throws ClassNotFoundException, IOException{
         if(list.get(ser_no).getPassword().equals(password)){
             Boolean flag = true;
@@ -69,7 +70,6 @@ public class PAR {
                 }
                 else if(input== 3){
                     flag= false;
-                    sc.close();
                     System.out.println("you have been logged out");
                     System.out.println("*".repeat(75));
                 }

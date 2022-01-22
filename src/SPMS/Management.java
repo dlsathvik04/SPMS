@@ -13,16 +13,20 @@ public class Management {
     }
 
     public void nullStudent(int i) throws ClassNotFoundException, IOException{
+        SR.start();
         SR.nullifyStudent(i);
     }
-    public void getAll(){
+    public void getAll() throws ClassNotFoundException, IOException{
+        SR.start();
         int i = 0;
         for(Student s: SR.list){
             System.out.println(i + ": "+s.toString());
+            System.out.println("*".repeat(75));
             i++;
         }    
     }
     public void reset() throws ClassNotFoundException, IOException{
+        SR.start();
         SR.list.clear();
     }
 }
