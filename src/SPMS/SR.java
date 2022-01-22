@@ -125,6 +125,9 @@ public class SR {
                     System.out.println("you have been logged out");
                     System.out.println("*".repeat(75));
                 }
+                else{
+                    System.out.println("invalid input recieved please try another input");
+                }
             }
         }
         else{
@@ -139,13 +142,14 @@ public class SR {
         list.set(i, s);
     }
 
-    static ArrayList<Student> sort(Float tenthpercentage, float twelthPercentage,int noOfBackLogs,float CGPA){
+    static ArrayList<Student> sort(Float tenthpercentage, float twelthPercentage,int noOfBackLogs,float CGPA) throws ClassNotFoundException, IOException{
+        start();
         ArrayList<Student> req_student = new ArrayList<Student>();
         for (Student s : list){
-            if(s.gettenthPercentage() > tenthpercentage){
-                if(s.gettwelthhPercentage()>twelthPercentage){
-                    if(s.getnoOfBackLogs()<noOfBackLogs){
-                        if(s.getCGPA()>CGPA){
+            if(s.gettenthPercentage() >= tenthpercentage){
+                if(s.gettwelthhPercentage()>=twelthPercentage){
+                    if(s.getnoOfBackLogs()<=noOfBackLogs){
+                        if(s.getCGPA()>=CGPA){
                             req_student.add(s);
                         }
                         else{}

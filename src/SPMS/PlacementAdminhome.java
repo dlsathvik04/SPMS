@@ -3,15 +3,14 @@ package SPMS;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Studenthome {
-    public static void IAmStudent() throws ClassNotFoundException, IOException{
+public class PlacementAdminhome {
+    public static void IAmPlacementAdmin() throws ClassNotFoundException, IOException{
         Scanner sc = new Scanner(System.in);
-        SR.start();
-        System.out.println("Welcome to SPMS student portal");
+        PAR.start();
+        System.out.println("Welcome to SPMS Placement Admin portal");
         System.out.println("enter \n1 to login or \n2 to register ");
-            
-        //choosing the stream based on new or old user
         int i2=sc.nextInt();
+        sc.nextLine();
 
         if (i2==1) {
 
@@ -25,27 +24,27 @@ public class Studenthome {
 			String ent_password= sc.nextLine(); 
                 
             //code for validating login
-            SR.login(ent_serialNo, ent_password);
+            PAR.login(ent_serialNo, ent_password);
                 
         }
-            
-        //register
-		else if (i2==2){
-            //roll number
-            System.out.println("*".repeat(75));
-            System.out.println("please enter your rollNo");
-			int reg_roll= sc.nextInt();
-            sc.nextLine();
 
+        //String Organisation
+
+        else if (i2==2){
             //name
             System.out.println("*".repeat(75));
 			System.out.println("please enter your name");
 			String reg_name= sc.nextLine();
 
-            //batch
+            //organisation name
             System.out.println("*".repeat(75));
-            System.out.println("please enter your batch eg: 21AIEB");
-			String reg_batch = sc.nextLine();
+			System.out.println("please enter your organisation name");
+			String reg_organisation= sc.nextLine();
+
+            //email
+            System.out.println("*".repeat(75));
+            System.out.println("please enter your email address");
+			String reg_email = sc.nextLine();
 
             //phone
             System.out.println("*".repeat(75));
@@ -58,15 +57,13 @@ public class Studenthome {
 			System.out.println("please set your password");
 			String reg_password =sc.nextLine();
 
-            //code for validating the registration
-            System.out.println("*".repeat(75));
-            Student s =  new Student(reg_phone, reg_roll, reg_name, reg_batch, reg_password);
-            SR.register(s);
+            PAR.register(new PlacementAdmin(reg_password, reg_phone, reg_email, reg_name, reg_organisation));
         }
 
         else{
             System.out.println("invalid input recieved please try again");
         }
-        sc.close();	
+
+        sc.close();
     }
 }

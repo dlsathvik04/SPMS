@@ -117,7 +117,7 @@ public class Student implements Serializable{
     }
 
 	public String oneLineString(){
-		return("name: " + this.name + "phone: " + this.phNo + 
+		return("name: " + this.name + "; phone: " + this.phNo + 
         "; batch: " +this.batch+"; CGPA: "+ this.CGPA +"; Roll Number: "+ 
         this.rollNo +"; Tenth Percentage: "+ this.tenthPercentage+"; Twelth Percentage: "+ 
         this.twelthPercentage +"; No of Backlogs: "+ this.noOfBackLogs);
