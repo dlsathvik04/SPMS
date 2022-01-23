@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class PlacementAdminhome {
+
+    @SuppressWarnings("resource")
     public static void IAmPlacementAdmin() throws ClassNotFoundException, IOException{
         Scanner sc = new Scanner(System.in);
         PAR.start();
@@ -64,6 +66,5 @@ public class PlacementAdminhome {
             System.out.println("invalid input recieved please try again");
         }
 
-        sc.close();
     }
 }
