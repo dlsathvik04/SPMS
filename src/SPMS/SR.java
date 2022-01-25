@@ -115,7 +115,7 @@ public class SR {
                     int newbl =sc.nextInt();
                     sc.nextLine();
                     Student s = list.get(ser_no);
-                    s.settenthPercentage(newbl);
+                    s.setBackLogs(newbl);
                     list.set(ser_no, s);
                     System.out.println("number of backlogs changed");
                     System.out.println("*".repeat(75));
