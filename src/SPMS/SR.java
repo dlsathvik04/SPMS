@@ -93,7 +93,7 @@ public class SR {
                     Float newtwelthpercentage =sc.nextFloat();
                     sc.nextLine();
                     Student s = list.get(ser_no);
-                    s.settenthPercentage(newtwelthpercentage);
+                    s.settwelthPercentage(newtwelthpercentage);
                     list.set(ser_no, s);
                     System.out.println("twelth percentage changed");
                     System.out.println("*".repeat(75));
