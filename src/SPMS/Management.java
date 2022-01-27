@@ -5,17 +5,18 @@ import java.io.IOException;
 public class Management {
     private String passCode= "amritavishwavidyapeetam";
 
+    //returns the passcode
     public String getCode(){
         return passCode;
     }
-    public void setCode(String passCode){
-        this.passCode = passCode;
-    }
 
+    //method to null a student 
     public void nullStudent(int i) throws ClassNotFoundException, IOException{
         SR.start();
         SR.nullifyStudent(i);
     }
+
+    //priints all the details of all the students 
     public void getAll() throws ClassNotFoundException, IOException{
         SR.start();
         int i = 0;
@@ -25,6 +26,8 @@ public class Management {
             i++;
         }    
     }
+
+    //method to reset the whole application
     public void reset() throws ClassNotFoundException, IOException{
         SR.start();
         SR.list.clear();

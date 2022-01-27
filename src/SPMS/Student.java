@@ -1,18 +1,19 @@
 package SPMS;
 
-import java.io.Serializable;
+import java.io.Serializable; //this class implements a serializable interface that allows object of this class to be converted into
+//byte stream for writing into a file 
 
 public class Student implements Serializable{
-    private String password;
-	private Long phNo;
-	private int rollNo;
-	private String name;
-	private String batch;
-	private float tenthPercentage;
-	private float twelthPercentage;
-	private int noOfBackLogs;
-	private float CGPA;
-	private String otherQualifications;
+    private String password;//password
+	private Long phNo;//phone number
+	private int rollNo;//roll number
+	private String name;//name
+	private String batch;//batch
+	private float tenthPercentage;//10th percentage
+	private float twelthPercentage;//12th percentage
+	private int noOfBackLogs;//number of backlogs
+	private float CGPA;// average CGPA
+	private String otherQualifications;// other things in string
 	
 	//single parametric constructor for Student class
 	Student(){
@@ -108,7 +109,7 @@ public class Student implements Serializable{
 		this.password = password;
 	}
 
-	//to be developed further
+	//all details in multiple lines
     public String toString(){
         return ("name: " + this.name + 
         ";\nbatch: " +this.batch+";\nCGPA: "+ this.CGPA +";\nRoll Number: "+ 
@@ -116,6 +117,8 @@ public class Student implements Serializable{
         this.twelthPercentage +";\nNo of Backlogs: "+ this.noOfBackLogs);
     }
 
+
+	//all details in one line
 	public String oneLineString(){
 		return("name: " + this.name + "; phone: " + this.phNo + 
         "; batch: " +this.batch+"; CGPA: "+ this.CGPA +"; Roll Number: "+ 
