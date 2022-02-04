@@ -6,7 +6,7 @@ import java.util.Scanner;
 //this class is for the interactive interface between a student and the system
 public class Managementhome {
 
-    //this is a static method this will run when the user is a placement admin
+    //this is a static method this will run when the user is management
     public static void IAmManagement() throws ClassNotFoundException, IOException{
         //create an object for management class
         Management m = new Management();
